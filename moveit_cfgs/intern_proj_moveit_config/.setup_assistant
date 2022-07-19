@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: fanuc_lrmate200ic_support
+    relative_path: workcell.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/snp_workcell.srdf
+  CONFIG:
+    author_name: David Spielman
+    author_email: david.spielman@swri.org
+    generated_timestamp: 1657580669
