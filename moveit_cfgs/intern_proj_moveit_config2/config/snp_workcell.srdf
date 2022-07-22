@@ -13,13 +13,31 @@
         <chain base_link="base_link" tip_link="sand_tcp"/>
     </group>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="acryllic" link2="base_link" reason="Never"/>
+    <disable_collisions link1="acryllic" link2="ceiling" reason="Never"/>
+    <disable_collisions link1="acryllic" link2="floor" reason="Adjacent"/>
+    <disable_collisions link1="acryllic" link2="link_1" reason="Never"/>
+    <disable_collisions link1="acryllic" link2="link_2" reason="Never"/>
+    <disable_collisions link1="acryllic" link2="link_3" reason="Never"/>
+    <disable_collisions link1="acryllic" link2="link_4" reason="Never"/>
+    <disable_collisions link1="acryllic" link2="link_5" reason="Never"/>
+    <disable_collisions link1="acryllic" link2="link_6" reason="Never"/>
+    <disable_collisions link1="acryllic" link2="wall_back" reason="Never"/>
+    <disable_collisions link1="acryllic" link2="wall_front" reason="Never"/>
+    <disable_collisions link1="acryllic" link2="wall_right" reason="Never"/>
     <disable_collisions link1="base_link" link2="ceiling" reason="Adjacent"/>
     <disable_collisions link1="base_link" link2="floor" reason="Never"/>
     <disable_collisions link1="base_link" link2="link_1" reason="Adjacent"/>
     <disable_collisions link1="base_link" link2="link_2" reason="Never"/>
+    <disable_collisions link1="base_link" link2="wall_back" reason="Never"/>
+    <disable_collisions link1="base_link" link2="wall_front" reason="Never"/>
+    <disable_collisions link1="base_link" link2="wall_right" reason="Never"/>
     <disable_collisions link1="ceiling" link2="floor" reason="Adjacent"/>
     <disable_collisions link1="ceiling" link2="link_1" reason="Never"/>
     <disable_collisions link1="ceiling" link2="link_2" reason="Never"/>
+    <disable_collisions link1="ceiling" link2="wall_back" reason="Never"/>
+    <disable_collisions link1="ceiling" link2="wall_front" reason="Default"/>
+    <disable_collisions link1="ceiling" link2="wall_right" reason="Never"/>
     <disable_collisions link1="ee" link2="link_3" reason="Never"/>
     <disable_collisions link1="ee" link2="link_5" reason="Default"/>
     <disable_collisions link1="ee" link2="link_6" reason="Adjacent"/>
@@ -29,13 +47,27 @@
     <disable_collisions link1="floor" link2="link_4" reason="Never"/>
     <disable_collisions link1="floor" link2="link_5" reason="Never"/>
     <disable_collisions link1="floor" link2="link_6" reason="Never"/>
+    <disable_collisions link1="floor" link2="wall_back" reason="Adjacent"/>
+    <disable_collisions link1="floor" link2="wall_front" reason="Adjacent"/>
+    <disable_collisions link1="floor" link2="wall_right" reason="Adjacent"/>
     <disable_collisions link1="link_1" link2="link_2" reason="Adjacent"/>
     <disable_collisions link1="link_1" link2="link_3" reason="Never"/>
+    <disable_collisions link1="link_1" link2="wall_back" reason="Never"/>
+    <disable_collisions link1="link_1" link2="wall_front" reason="Never"/>
+    <disable_collisions link1="link_1" link2="wall_right" reason="Never"/>
     <disable_collisions link1="link_2" link2="link_3" reason="Adjacent"/>
+    <disable_collisions link1="link_2" link2="wall_back" reason="Never"/>
     <disable_collisions link1="link_3" link2="link_4" reason="Adjacent"/>
     <disable_collisions link1="link_3" link2="link_5" reason="Never"/>
     <disable_collisions link1="link_3" link2="link_6" reason="Never"/>
+    <disable_collisions link1="link_3" link2="wall_back" reason="Never"/>
     <disable_collisions link1="link_4" link2="link_5" reason="Adjacent"/>
     <disable_collisions link1="link_4" link2="link_6" reason="Never"/>
+    <disable_collisions link1="link_4" link2="wall_back" reason="Never"/>
     <disable_collisions link1="link_5" link2="link_6" reason="Adjacent"/>
+    <disable_collisions link1="link_5" link2="wall_back" reason="Never"/>
+    <disable_collisions link1="link_6" link2="wall_back" reason="Never"/>
+    <disable_collisions link1="wall_back" link2="wall_front" reason="Never"/>
+    <disable_collisions link1="wall_back" link2="wall_right" reason="Never"/>
+    <disable_collisions link1="wall_front" link2="wall_right" reason="Never"/>
 </robot>

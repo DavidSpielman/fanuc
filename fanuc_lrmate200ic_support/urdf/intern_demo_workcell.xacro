@@ -16,6 +16,10 @@
   <material name="blue">
     <color rgba="0 0 1 1"/>
   </material>
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+
 
   <link name="world"/>
 
@@ -61,7 +65,6 @@
         <geometry>
           <box size="${lengthw-0.0508} ${widthw} 0.001"/>
         </geometry>
-        <material name="light_gray"/>
       </collision>
     </link>
 
@@ -85,7 +88,6 @@
         <geometry>
           <box size="${width} ${widthw} 0.001"/>
         </geometry>
-        <material name="light_gray"/>
       </collision>
     </link>
 
@@ -110,7 +112,6 @@
         <geometry>
           <box size="${width} ${widthw} 0.001"/>
         </geometry>
-        <material name="light_gray"/>
       </collision>
     </link>
 
@@ -121,7 +122,7 @@
     </joint>
   <!-- Add Acryllic-->
     <xacro:property name="lengtha" value="0.923925"/>
-    <xacro:property name="widtha" value="0.8763"/>
+    <xacro:property name="widtha" value="0.8763"/>black
     <xacro:property name="thicknessa_plus_p" value="${0.01+0.0047625}"/>
     <link name="acryllic">
       <visual>
@@ -151,6 +152,7 @@
       <geometry>3.3125+7.375/2
         <box size="${length-0.0508} ${width} 0.001"/>
       </geometry>
+      <material name="black"/>
     </visual>
     <collision>
       <origin xyz="0 -${0/10} 0.001" rpy="0 0 0"/>
@@ -189,6 +191,7 @@
       <geometry>
         <cylinder length="${ee_length}" radius="${ee_radius}"/>
       </geometry>
+      <material name="black"/>
     </visual>
     <collision>
       <origin xyz="0 0 0.115" rpy="0 0 0"/>
