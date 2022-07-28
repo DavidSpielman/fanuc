@@ -17,6 +17,7 @@
 
   <rosparam command="load" file="$(find fanuc_lrmate200ic_support)/config/joint_names_lrmate200ic.yaml" />
 
+  <remap from="joint_states" to="robot_joint_states"/>
   <include file="$(find fanuc_driver)/launch/robot_interface_streaming.launch">
     <arg name="robot_ip"   value="$(arg robot_ip)" />
     <arg name="J23_factor" value="$(arg J23_factor)" />
