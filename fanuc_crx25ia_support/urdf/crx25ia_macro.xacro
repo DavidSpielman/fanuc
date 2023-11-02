@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:macro name="fanuc_crx25ia" params="prefix">
+
+    <link name="${prefix}CRX-25iA_J1BASE">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/visual/CRX-25iA_J1BASE.ply"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/collision/CRX-25iA_J1BASE_CH.ply"/>
+        </geometry>
+      </collision>
+    </link>
+    <link name="${prefix}CRX-25iA_Axis1">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/visual/CRX-25iA_Axis1.ply"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/collision/CRX-25iA_Axis1_CH.ply"/>
+        </geometry>
+      </collision>
+    </link>
+    <link name="${prefix}CRX-25iA_Axis2">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/visual/CRX-25iA_Axis2.ply"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/collision/CRX-25iA_Axis2_CH.ply"/>
+        </geometry>
+      </collision>
+    </link>
+    <link name="${prefix}CRX-25iA_Axis3">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/visual/CRX-25iA_Axis3.ply"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/collision/CRX-25iA_Axis3_CH.ply"/>
+        </geometry>
+      </collision>
+    </link>
+    <link name="${prefix}CRX-25iA_Axis4">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/visual/CRX-25iA_Axis4.ply"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/collision/CRX-25iA_Axis4_CH.ply"/>
+        </geometry>
+      </collision>
+    </link>
+    <link name="${prefix}CRX-25iA_Axis5">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/visual/CRX-25iA_Axis5.ply"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/collision/CRX-25iA_Axis5_CH.ply"/>
+        </geometry>
+      </collision>
+    </link>
+    <link name="${prefix}CRX-25iA_Axis6">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/visual/CRX-25iA_Axis6.ply"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_crx25ia_support/meshes/crx25ia/collision/CRX-25iA_Axis6_CH.ply"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${prefix}joint_1" type="revolute">
+      <origin xyz="0 0 0.370" rpy="0 0 0" />
+      <parent link="${prefix}CRX-25iA_J1BASE" />
+      <child link="${prefix}CRX-25iA_Axis1" />
+      <axis xyz="0 0 1" />
+      <limit effort="0" lower="${radians(-180)}" upper="${radians(180)}" velocity="${radians(120)}" />
+    </joint>
+    <joint name="${prefix}joint_2" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <parent link="${prefix}CRX-25iA_Axis1" />
+      <child link="${prefix}CRX-25iA_Axis2" />
+      <axis xyz="0 1 0" />
+      <limit effort="0" lower="${radians(-180)}" upper="${radians(180)}" velocity="${radians(120)}" />
+    </joint>
+    <joint name="${prefix}joint_3" type="revolute">
+      <origin xyz="0 0 0.950" rpy="0 0 0" />
+      <parent link="${prefix}CRX-25iA_Axis2" />
+      <child link="${prefix}CRX-25iA_Axis3" />
+      <axis xyz="0 -1 0" />
+      <limit effort="0" lower="${radians(-270)}" upper="${radians(270)}" velocity="${radians(180)}" />
+    </joint>
+    <joint name="${prefix}joint_4" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="${prefix}CRX-25iA_Axis3"/>
+      <child link="${prefix}CRX-25iA_Axis4"/>
+      <axis xyz="-1 0 0"/>
+      <limit effort="0" lower="${radians(-190)}" upper="${radians(190)}" velocity="${radians(180)}" />
+    </joint>
+    <joint name="${prefix}joint_5" type="revolute">
+      <origin xyz="0.750 -0.185 0" rpy="0 0 0"/>
+      <parent link="${prefix}CRX-25iA_Axis4"/>
+      <child link="${prefix}CRX-25iA_Axis5"/>
+      <axis xyz="0 -1 0"/>
+      <limit effort="0" lower="${radians(-180)}" upper="${radians(180)}" velocity="${radians(180)}" />
+    </joint>
+    <joint name="${prefix}joint_6" type="revolute">
+      <origin xyz="0.160 0 0" rpy="0 0 0"/>
+      <parent link="${prefix}CRX-25iA_Axis5"/>
+      <child link="${prefix}CRX-25iA_Axis6"/>
+      <axis xyz="-1 0 0"/>
+      <limit effort="0" lower="${radians(-190)}" upper="${radians(190)}" velocity="${radians(180)}" />
+    </joint>
+
+    <link name="${prefix}base" />
+    <joint name="${prefix}CRX-25iA_J1BASE-base" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="${prefix}CRX-25iA_J1BASE"/>
+      <child link="${prefix}base"/>
+    </joint>
+  </xacro:macro>
+</robot>
