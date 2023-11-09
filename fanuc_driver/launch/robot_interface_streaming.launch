@@ -55,6 +55,8 @@
   <!-- joint_trajectory_action: provides actionlib interface for 
        high-level robot control
   -->
+  <!-- <remap from="/joint_trajectory_action" to="manipulator_controller/follow_joint_trajectory"/> -->
   <node pkg="industrial_robot_client" type="joint_trajectory_action" 
     name="joint_trajectory_action" />
 </launch>
+
